@@ -1,0 +1,130 @@
+    # Project definitions (do not edit)
+Task: Front_view
+scorer: raul
+date: Aug31
+multianimalproject: true
+identity: false
+
+    # Project path (change when moving around)
+project_path: C:\Users\BEE Team\Desktop\Videos DLC\Front_view-raul-2023-08-31
+
+    # Annotation data set configuration (and individual video cropping parameters)
+video_sets:
+  C:\Users\BEE Team\Desktop\Videos DLC\Front_view-raul-2023-08-31\videos\LD03AL38_01_re-encode.mp4:
+    crop: 0, 1920, 0, 1080
+  C:\Users\BEE Team\Desktop\Videos DLC\Front_view-raul-2023-08-31\videos\LD03AL38_02_re-encode.mp4:
+    crop: 0, 1920, 0, 1080
+  C:\Users\BEE Team\Desktop\Videos DLC\Front_view-raul-2023-08-31\videos\LD03AL38_03_re-encode.mp4:
+    crop: 0, 1920, 0, 1080
+  C:\Users\BEE Team\Desktop\Videos DLC\Front_view-raul-2023-08-31\videos\LD04AL37_01_re-encode.mp4:
+    crop: 0, 1920, 0, 1080
+  C:\Users\BEE Team\Desktop\Videos DLC\Front_view-raul-2023-08-31\videos\LD04AL37_02_re-encode.mp4:
+    crop: 0, 1920, 0, 1080
+  C:\Users\BEE Team\Desktop\Videos DLC\Front_view-raul-2023-08-31\videos\LD04AL37_03_re-encode.mp4:
+    crop: 0, 1920, 0, 1080
+  C:\Users\BEE Team\Desktop\Videos DLC\Front_view-raul-2023-08-31\videos\LD04AL37_04_re-encode.mp4:
+    crop: 0, 1920, 0, 1080
+  C:\Users\BEE Team\Desktop\Videos DLC\Front_view-raul-2023-08-31\videos\LD13AL50_01_re-encode.mp4:
+    crop: 0, 1920, 0, 1080
+  C:\Users\BEE Team\Desktop\Videos DLC\Front_view-raul-2023-08-31\videos\LD13AL50_02_re-encode.mp4:
+    crop: 0, 1920, 0, 1080
+  C:\Users\BEE Team\Desktop\Videos DLC\Front_view-raul-2023-08-31\videos\LD13AL50_03_re-encode.mp4:
+    crop: 0, 1920, 0, 1080
+  C:\Users\BEE Team\Desktop\Videos DLC\Front_view-raul-2023-08-31\videos\LD13AL50_04_re-encode.mp4:
+    crop: 0, 1920, 0, 1080
+  C:\Users\BEE Team\Desktop\Videos DLC\Front_view-raul-2023-08-31\videos\LD14AL47_01_re-encode.mp4:
+    crop: 0, 1920, 0, 1080
+  C:\Users\BEE Team\Desktop\Videos DLC\Front_view-raul-2023-08-31\videos\LD14AL47_02_re-encode.mp4:
+    crop: 0, 1920, 0, 1080
+  C:\Users\BEE Team\Desktop\Videos DLC\Front_view-raul-2023-08-31\videos\LD14AL47_03_re-encode.mp4:
+    crop: 0, 1920, 0, 1080
+  C:\Users\BEE Team\Desktop\Videos DLC\Front_view-raul-2023-08-31\videos\LD23AL60_01_re-encode.mp4:
+    crop: 0, 1920, 0, 1080
+  C:\Users\BEE Team\Desktop\Videos DLC\Front_view-raul-2023-08-31\videos\LD23AL60_02_re-encode.mp4:
+    crop: 0, 1920, 0, 1080
+  C:\Users\BEE Team\Desktop\Videos DLC\Front_view-raul-2023-08-31\videos\LD23AL60_03_re-encode.mp4:
+    crop: 0, 1920, 0, 1080
+  C:\Users\BEE Team\Desktop\Videos DLC\Front_view-raul-2023-08-31\videos\LD24AL57_01_re-encode.mp4:
+    crop: 0, 1920, 0, 1080
+  C:\Users\BEE Team\Desktop\Videos DLC\Front_view-raul-2023-08-31\videos\LD24AL57_02_re-encode.mp4:
+    crop: 0, 1920, 0, 1080
+  C:\Users\BEE Team\Desktop\Videos DLC\Front_view-raul-2023-08-31\videos\LD24AL57_03_re-encode.mp4:
+    crop: 0, 1920, 0, 1080
+individuals:
+- Client
+uniquebodyparts:
+- Cleaner_Mouth
+- Cleaner_Spine1
+- Cleaner_Spine2
+- Cleaner_Tail
+multianimalbodyparts:
+- Client_Mouth
+- Client_Spine_head
+- Client_Spine_mid
+- Client_Body_top1
+- Client_Body_top2
+- Client_Body_bot1
+- Client_Body_bot2
+- Client_Tail
+- Client_Tail_Top
+- Client_Tail_Bot
+bodyparts: MULTI!
+
+    # Fraction of video to start/stop when extracting frames for labeling/refinement
+start: 0
+stop: 1
+numframes2pick: 20
+
+    # Plotting configuration
+skeleton:
+- - Client_Mouth
+  - Client_Spine_head
+- - Client_Spine_head
+  - Client_Spine_mid
+- - Client_Body_top1
+  - Client_Body_top2
+- - Client_Spine_mid
+  - Client_Tail
+- - Client_Mouth
+  - Client_Body_top1
+- - Client_Tail
+  - Client_Tail_Bot
+- - Client_Body_bot2
+  - Client_Tail
+- - Client_Body_bot1
+  - Client_Body_bot2
+- - Client_Mouth
+  - Client_Body_bot1
+- - Client_Body_top2
+  - Client_Tail
+- - Client_Tail
+  - Client_Tail_Top
+skeleton_color: black
+pcutoff: 0.75
+dotsize: 4
+alphavalue: 0.7
+colormap: rainbow
+
+    # Training,Evaluation and Analysis configuration
+TrainingFraction:
+- 0.95
+iteration: 0
+default_net_type: dlcrnet_ms5
+default_augmenter: multi-animal-imgaug
+default_track_method: ellipse
+snapshotindex: -1
+batch_size: 16
+
+    # Cropping Parameters (for analysis and outlier frame detection)
+cropping: false
+    #if cropping is true for analysis, then set the values here:
+x1: 0
+x2: 640
+y1: 277
+y2: 624
+
+    # Refinement configuration (parameters from annotation dataset configuration also relevant in this stage)
+corner2move2:
+- 50
+- 50
+move2corner: true

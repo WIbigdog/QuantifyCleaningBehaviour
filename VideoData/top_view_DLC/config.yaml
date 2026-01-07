@@ -1,0 +1,107 @@
+    # Project definitions (do not edit)
+Task: Top_view_tracking
+scorer: raul
+date: Aug19
+multianimalproject: true
+identity: false
+
+    # Project path (change when moving around)
+project_path: C:\Users\BEE Team\Desktop\Videos DLC\Top_view_tracking-raul-2023-08-19
+
+    # Annotation data set configuration (and individual video cropping parameters)
+video_sets:
+  C:\Users\BEE Team\Desktop\Videos DLC\Top_view_tracking-raul-2023-08-19\videos\LD14_all.mp4:
+    crop: 0, 1920, 0, 1080
+  C:\Users\BEE Team\Desktop\Videos DLC\Top_view_tracking-raul-2023-08-19\videos\LD23_all.mp4:
+    crop: 0, 1920, 0, 1080
+  C:\Users\BEE Team\Desktop\Videos DLC\Top_view_tracking-raul-2023-08-19\videos\LD03_all.mp4:
+    crop: 0, 1920, 0, 1080
+  C:\Users\BEE Team\Desktop\Videos DLC\Top_view_tracking-raul-2023-08-19\videos\LD04_all.mp4:
+    crop: 0, 1920, 0, 1080
+  C:\Users\BEE Team\Desktop\Videos DLC\Top_view_tracking-raul-2023-08-19\videos\LD13_all.mp4:
+    crop: 0, 1920, 0, 1080
+  C:\Users\BEE Team\Desktop\Videos DLC\Top_view_tracking-raul-2023-08-19\videos\LD24_all.mp4:
+    crop: 0, 1920, 0, 1080
+
+individuals:
+- Client
+uniquebodyparts:
+- Cleaner_Mouth
+- Cleaner_Spine1
+- Cleaner_Spine2
+- Cleaner_Tail
+multianimalbodyparts:
+- Client_Mouth
+- Client_Eye_L
+- Client_Eye_R
+- Client_FinBase_L
+- Client_FinTip_L
+- Client_FinBase_R
+- Client_FinTip_R
+- Client_Spine_1
+- Client_Spine_2
+- Client_Tail
+- Client_TailTip
+bodyparts: MULTI!
+
+    # Fraction of video to start/stop when extracting frames for labeling/refinement
+start: 0
+stop: 1
+numframes2pick: 120
+
+    # Plotting configuration
+skeleton:
+- - Client_Mouth
+  - Client_Eye_L
+- - Client_Mouth
+  - Client_Eye_R
+- - Client_Eye_L
+  - Client_FinBase_L
+- - Client_FinBase_L
+  - Client_FinTip_L
+- - Client_Eye_R
+  - Client_FinBase_R
+- - Client_FinBase_R
+  - Client_FinTip_R
+- - Client_Eye_L
+  - Client_Spine_2
+- - Client_Eye_R
+  - Client_Spine_2
+- - Client_Mouth
+  - Client_Spine_1
+- - Client_Spine_1
+  - Client_Spine_2
+- - Client_Spine_2
+  - Client_Tail
+- - Client_Tail
+  - Client_TailTip
+
+skeleton_color: black
+pcutoff: 0.75
+dotsize: 4
+alphavalue: 0.7
+colormap: rainbow
+
+    # Training,Evaluation and Analysis configuration
+TrainingFraction:
+- 0.95
+iteration: 3
+default_net_type: dlcrnet_ms5
+default_augmenter: multi-animal-imgaug
+default_track_method: ellipse
+snapshotindex: -1
+batch_size: 16
+
+    # Cropping Parameters (for analysis and outlier frame detection)
+cropping: false
+    #if cropping is true for analysis, then set the values here:
+x1: 0
+x2: 640
+y1: 277
+y2: 624
+
+    # Refinement configuration (parameters from annotation dataset configuration also relevant in this stage)
+corner2move2:
+- 50
+- 50
+move2corner: true
