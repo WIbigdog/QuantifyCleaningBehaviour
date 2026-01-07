@@ -9,6 +9,9 @@ Within this context, we introduce a semi-automated tracking system that utilizes
 Our pipeline relies on posture estimation for body part tracking of interacting individuals and we present two approaches for behaviour classification – direct mathematical quantification of behaviour, and random forests. 
 Our approach offers a consistent and reliable alternative to manual video analysis of cleaning behaviour.
 
+## All data obtained from tracking from DeepLabCut is provided here.
+## Also the code used for post processing data, calculations and plots are also presenting here.
+
 [More info about us](https://www.behecoevo.org/)
 
 By *Behavioural Ecology and Evolution Group, MARE - Marine and Environmental Sciences Centre*
