@@ -12,6 +12,8 @@ Our approach offers a consistent and reliable alternative to manual video analys
 ## All data obtained from tracking from DeepLabCut is provided here.
 ## Also the code used for post processing data, calculations and plots are also presenting here.
 
+To install the used version of DeepLabCut download the [yaml file](DEEPLABCUT.yaml) and preceed to install it. 
+
 [More info about us](https://www.behecoevo.org/)
 
 By *Behavioural Ecology and Evolution Group, MARE - Marine and Environmental Sciences Centre*
